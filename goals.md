@@ -1,0 +1,16 @@
+CCNQ4 =
+- Docker.io instead of Debian packages
+  - docker package per app e.g. freeswitch, opensips, etc.
+  - docker package per node.js app (but need to keep config alongside e.g. FreeSwitch, so will need _changes-based + RabbitMQ there still) -- yes, but as clients, not servers
+- node.js clustering for better throughput (esp. ESL clustering)
+- programmable LCR w/ ESL (remove outbound-proxies)
+- keep (LCR) vs (Billing info) separate
+- fully-tested & benchmarked ESL, copes with crashes, load, etc.
+- CDRs with proper IDs & dynamic (e.g. per month, per day, per account + day, etc.) DB-names
+- routing data out of provisioning db; one routing DB per routing profile; summarize `rules` (digit patterns) into `routes` (e.g. "SP.mobile") for provisioning purposes (bulk edits, basically)
+- conntrack etc. for mediaproxy failover
+- more _changes monitors
+- freeswitch reload_acl etc
+- RabbitMQ automation (or another solution that allows dynamic account creation for end-users, etc.)
+- proper RabbitMQ <-> browser integration (e.g. Socket.IO, sock.js, etc.)
+- recent (>=1.4) FreeSwitch
