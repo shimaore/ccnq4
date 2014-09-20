@@ -14,3 +14,6 @@ CCNQ4 =
 - RabbitMQ automation (or another solution that allows dynamic account creation for end-users, etc.)
 - proper RabbitMQ <-> browser integration (e.g. Socket.IO, sock.js, etc.)
 - recent (>=1.4) FreeSwitch
+- logs!! (winston, winston-irc, winston-amqp, winston-nodemailer)
+- metrics!!
+- IPv6
