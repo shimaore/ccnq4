@@ -11,9 +11,13 @@ CCNQ4 =
 - conntrack etc. for mediaproxy failover
 - more _changes monitors
 - freeswitch reload_acl etc
-- RabbitMQ automation (or another solution that allows dynamic account creation for end-users, etc.)
+- RabbitMQ automation (using `rabbitmq-management` plugin and its [API](http://hg.rabbitmq.com/rabbitmq-management/raw-file/rabbitmq_v3_3_5/priv/www/api/index.html))
 - proper RabbitMQ <-> browser integration (e.g. Socket.IO, sock.js, etc.)
 - recent (>=1.4) FreeSwitch
 - logs!! (winston, winston-irc, winston-amqp, winston-nodemailer)
 - metrics!!
 - IPv6
+- use CouchDB `_replicator` instead of our own (i.e. make it a provisioning operation, not a local, runtime operation)
+- since we're using Docker, all accesses must be (a) authenticated and (b) encrypted. Use Node.js' tls.connect() and tls.CreateServer()'s `ca` option to that goal (and provide / copy a toolbox for CA management) -- ideally automate that as well during Docker image creation.
+- provide proper certificates to CouchDB, RabbitMQ, OpenSIPS, and FreeSwitch
+- use JSON interface for OpenSIPS (the one I wrote!)
