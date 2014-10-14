@@ -3,7 +3,7 @@ CCNQ4 =
   - docker package per app e.g. freeswitch, opensips, etc.
   - docker package per node.js app (but need to keep config alongside e.g. FreeSwitch, so will need _changes-based + RabbitMQ there still) -- yes, but as clients, not servers
 - node.js clustering for better throughput (esp. ESL clustering)
-- programmable LCR w/ ESL (remove outbound-proxies)
+- programmable LCR w/ ESL (remove outbound-proxies) → [`tough-rate`](https://github.com/shimaore/tough-rate)
 - keep (LCR) vs (Billing info) separate
 - fully-tested & benchmarked ESL, copes with crashes, load, etc.
 - CDRs with proper IDs & dynamic (e.g. per month, per day, per account + day, etc.) DB-names
