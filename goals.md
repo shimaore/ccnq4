@@ -4,7 +4,7 @@ CCNQ4 =
   - docker package per node.js app (but need to keep config alongside e.g. FreeSwitch, so will need _changes-based + RabbitMQ there still) -- yes, but as clients, not servers
 - node.js clustering for better throughput (esp. ESL clustering)
 - programmable LCR w/ ESL (remove outbound-proxies) → [`tough-rate`](https://github.com/shimaore/tough-rate)
-- keep (LCR) vs (Billing info) separate
+- keep (LCR) vs (Billing info) separate -- NO, inject charging info into CDRs
 - fully-tested & benchmarked ESL, copes with crashes, load, etc.
 - CDRs with proper IDs & dynamic (e.g. per month, per day, per account + day, etc.) DB-names
 - routing data out of provisioning db; one routing DB per routing profile; summarize `rules` (digit patterns) into `routes` (e.g. "SP.mobile") for provisioning purposes (bulk edits, basically)
@@ -21,3 +21,30 @@ CCNQ4 =
 - since we're using Docker, all accesses must be (a) authenticated and (b) encrypted. Use Node.js' tls.connect() and tls.CreateServer()'s `ca` option to that goal (and provide / copy a toolbox for CA management) -- ideally automate that as well during Docker image creation.
 - provide proper certificates to CouchDB, RabbitMQ, OpenSIPS, and FreeSwitch
 - use JSON interface for OpenSIPS (the one I wrote!)
+
+
+- SIP & media redundancy
+  - OpenSIPS replication / state propagation
+  - MediaProxy + conntrackd
+  - FreeSwitch redundancy
+- legal intercept (e.g. conntrack stream replication)
+- I-PBX interco (with e.g. FS frontending)
+- multi-site (e.g. centralized SBC + local OpenSIPS)
+- CouchDB redundancy
+  - BigCouch
+  - ManyServers (ReallyHorizontal)
+- Vertical Services
+  - web
+  - tel
+- Billing & Cost in CouchDB
+  - insert billing & costing data in routes
+  - add "destinations" to automate updating
+  - billing & costing injected into CDRs for realtime
+  - one CDR database per billing cycle
+  - issues: French Added-Value Services (SVA), French short numbers, full vs low-cost hours (e.g. 3303994)
+- new routing architecture:
+  - inbound: replace ENUM with ESL code; routing is done inside FreeSwitch (via context redirection)
+  - inbound: put carrier-side and client-side inside same FreeSwitch process
+  - inbound: FreeSwitch-only server (on ex-carrier-side-SBCs) & OpenSIPS-only server (on ex-client-side-SBCs)
+  - outbound: replace OpenSIPS LCR with ESL code
+  - outbound: FreeSwitch-only server in two parts, one part up to and including LCR and carrier-side translation, second part with call-state only (all identical) or registrant
