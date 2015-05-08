@@ -6,7 +6,7 @@ SIP SoftSwitch. The development has started, see:
 * [acoustic-line](https://github.com/shimaore/acoustic-line), a CoffeeScript templating system to generate FreeSwitch XML configurations.
 * [esl](https://github.com/shimaore/), a Promise-based interface to FreeSwitch's event socket (inbound and outbound).
 * [docker.freeswitch](https://github.com/shimaore/docker.freeswitch), [docker.couchdb](https://github.com/shimaore/docker.couchdb), etc. -- ccnq4 will rely on docker.io instead of Debian packages which were the norm for ccnq3.
-* [spicy-action](https://github.com/shimaore/spicy-action) is a web an] Socket.IO proxy to allow clients, back-ends, and CouchDB, to exchange data.
+* [spicy-action](https://github.com/shimaore/spicy-action) is a web and Socket.IO proxy to allow clients, back-ends, and CouchDB, to exchange data.
 * [nifty-ground](), the sniffer trace tool, integrated with `spicy-action`, delivered as a Docker.IO container.
 * [useful-wind](https://github.com/shimaore/useful-wind), a middleware-based framework to build applications for FreeSwitch.
 * [thinkable-ducks](https://github.com/shimaore/thinkable-ducks), a Docker.IO image that extends `useful-wind` with a web interface and event notifications (to the `spicy-action` proxy) and embeds FreeSwitch.
@@ -14,6 +14,3 @@ SIP SoftSwitch. The development has started, see:
 * [ethereal-banana](https://github.com/shimaore/ethereal-banana) and [absurd-clover](https://github.com/shimaore/absurd-clover), the former CCNQ3 (browser-side) tools to handle sniffer traces and CDR statistics, ported to CCNQ4.
 * [royal-thing](https://github.com/shimaore/royal-thing), a tool to automatically restart an OpenSIPS registrant server on changes.
 And more to come!
-<!-- * [well-groomed-feast](https://github.com/shimaore/well-groomed-feast), the new voicemail server (current under development). -->
-<!-- * [squealing-cow] -->
-<!-- * [huge-play] -->
