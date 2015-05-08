@@ -2,7 +2,7 @@
 =================================
 
 SIP SoftSwitch. The development has started, see:
-* [tough-rate](https://github.com/shimaore/tough-rate/), the new, middleware-based, LCR engine, provided as a [Docker image](https://gtihub.com/shimaore/docker.tough-rate) with FreeSwitch, a web interface and notifications. Also available is [its munin plugin](https://github.com/shimaore/earsplitting-food)).
+* [tough-rate](https://github.com/shimaore/tough-rate/), the new, middleware-based, LCR engine, provided as a [Docker image](https://gtihub.com/shimaore/docker.tough-rate) with FreeSwitch, a web interface and notifications. Also available is [its munin plugin](https://github.com/shimaore/earsplitting-food).
 * [acoustic-line](https://github.com/shimaore/acoustic-line), a CoffeeScript templating system to generate FreeSwitch XML configurations.
 * [esl](https://github.com/shimaore/), a Promise-based interface to FreeSwitch's event socket (inbound and outbound).
 * [docker.freeswitch](https://github.com/shimaore/docker.freeswitch), [docker.couchdb](https://github.com/shimaore/docker.couchdb), etc. -- ccnq4 will rely on docker.io instead of Debian packages which were the norm for ccnq3.
