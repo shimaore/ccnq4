@@ -6,7 +6,7 @@ SIP SoftSwitch. All core development is completed (including Voicemail), develop
 Infrastructure
 --------------
 
-* [docker.freeswitch](https://github.com/shimaore/docker.freeswitch), [docker.couchdb](https://github.com/shimaore/docker.couchdb), etc. -- CCNQ4 will rely on docker.io instead of Debian packages which were the norm for CCNQ3.
+* [docker.freeswitch](https://github.com/shimaore/docker.freeswitch), [docker.couchdb](https://github.com/shimaore/docker.couchdb), etc. -- CCNQ4 relies on docker.io instead of Debian packages which were the norm for CCNQ3.
 * [ccnq4-opensips](https://github.com/shimaore/ccnq4-opensips), OpenSIPS-as-Docker-image integrated with configuration, CouchDB interfaces, REST management, ... (includes [royal-thing](https://github.com/shimaore/royal-thing), a tool to automatically restart an OpenSIPS registrant server on changes).
 * [willing-toothbrush](https://github.com/shimaore/willing-toothbrush), the CouchDB-backed DNS server.
 * [spicy-action](https://github.com/shimaore/spicy-action) is a web and Socket.IO proxy to allow browser-side clients, back-ends, and CouchDB, to exchange data.
