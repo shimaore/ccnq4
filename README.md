@@ -25,7 +25,7 @@ FreeSwitch XML Configuration
 FreeSwitch interaction with Node.js
 -----------------------------------
 
-* [esl](https://github.com/shimaore/), the Node.js Promise-based interface to FreeSwitch's event socket (inbound and outbound).
+* [esl](https://github.com/shimaore/esl), the Node.js Promise-based interface to FreeSwitch's event socket (inbound and outbound).
 
 Call Processing using Middleware
 --------------------------------
