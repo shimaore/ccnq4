@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ccnq4 by shimaore</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Ccnq4</h1>
+        <p class="header"></p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/shimaore/ccnq4/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/shimaore/ccnq4/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/shimaore/ccnq4">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/shimaore">shimaore</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="ccnq4" class="anchor" href="#ccnq4" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://ccnq.shimaore.net">CCNQ4</a>
+</h1>
+
+<p>SIP SoftSwitch. All core development is completed (including Voicemail), development is now focusing on extended applications (IP Centrex).</p>
+
+<h2>
+<a id="infrastructure" class="anchor" href="#infrastructure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Infrastructure</h2>
+
+<ul>
+<li>
+<a href="https://github.com/shimaore/docker.freeswitch">docker.freeswitch</a>, <a href="https://github.com/shimaore/docker.couchdb">docker.couchdb</a>, etc. -- CCNQ4 relies on docker.io instead of Debian packages which were the norm for CCNQ3.</li>
+<li>
+<a href="https://github.com/shimaore/ccnq4-opensips">ccnq4-opensips</a>, OpenSIPS-as-Docker-image integrated with configuration, CouchDB interfaces, REST management, ... (includes <a href="https://github.com/shimaore/royal-thing">royal-thing</a>, a tool to automatically restart an OpenSIPS registrant server on changes).</li>
+<li>
+<a href="https://github.com/shimaore/willing-toothbrush">willing-toothbrush</a>, the CouchDB-backed DNS server.</li>
+<li>
+<a href="https://github.com/shimaore/spicy-action">spicy-action</a> is a web and Socket.IO proxy to allow browser-side clients, back-ends, and CouchDB, to exchange data.</li>
+<li>
+<a href="https://github.com/shimaore/nifty-ground">nifty-ground</a>, the distributed sniffer, integrated with <code>spicy-action</code>, delivered as a Docker.IO container.</li>
+<li>
+<a href="https://github.com/shimaore/ethereal-banana">ethereal-banana</a> and <a href="https://github.com/shimaore/absurd-clover">absurd-clover</a>, browser-side tools to handle sniffer traces and CDR statistics.</li>
+<li>
+<a href="https://github.com/shimaore/proud-thumb">proud-thumb</a>, demonstration browser tool showing call progress in real-time.</li>
+<li>
+<a href="https://github.com/shimaore/nimble-direction">nimble-direction</a>, distributed CouchDB toolbox -- used to ensure individual call-processing servers continue working even in case of failure or unreachability of the master-master, main provisioning database.</li>
+<li>
+<a href="https://github.com/shimaore/cuddly">cuddly</a>, an operations-driven, simple to use and deploy, Socket.IO-based notification framework.</li>
+</ul>
+
+<h2>
+<a id="freeswitch-xml-configuration" class="anchor" href="#freeswitch-xml-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>FreeSwitch XML Configuration</h2>
+
+<ul>
+<li>
+<a href="https://github.com/shimaore/acoustic-line">acoustic-line</a>, the CoffeeScript templating system to generate FreeSwitch XML configurations.</li>
+<li>
+<a href="https://github.com/shimaore/bumpy-lawyer">bumpy-lawyer</a> FreeSwitch phrases for pronunciation of numbers, spelling words, etc.</li>
+</ul>
+
+<h2>
+<a id="freeswitch-interaction-with-nodejs" class="anchor" href="#freeswitch-interaction-with-nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>FreeSwitch interaction with Node.js</h2>
+
+<ul>
+<li>
+<a href="https://github.com/shimaore/esl">esl</a>, the Node.js Promise-based interface to FreeSwitch's event socket (inbound and outbound).</li>
+</ul>
+
+<h2>
+<a id="call-processing-using-middleware" class="anchor" href="#call-processing-using-middleware" aria-hidden="true"><span class="octicon octicon-link"></span></a>Call Processing using Middleware</h2>
+
+<p>CCNQ4 uses the concept of middleware (similar to the ones used by Connect, ExpressJS, ...) to simplify writing dynamic call-handling applications.</p>
+
+<ul>
+<li>
+<a href="https://github.com/shimaore/useful-wind">useful-wind</a>, a middleware-based framework to build applications for FreeSwitch.</li>
+<li>
+<a href="https://github.com/shimaore/thinkable-ducks">thinkable-ducks</a>, a npm package and Docker.IO image extending <code>useful-wind</code> with a REST interface and Socket.IO event notifications (to the <code>spicy-action</code> proxy) and embeds FreeSwitch.</li>
+</ul>
+
+<p>Available middlewares / applications:</p>
+
+<ul>
+<li>
+<a href="https://github.com/shimaore/tough-rate/">tough-rate</a>, LCR engine; provided as a <a href="https://gtihub.com/shimaore/docker.tough-rate">Docker image</a> with FreeSwitch, a REST interface and Socket.IO notifications. Also available is <a href="https://github.com/shimaore/earsplitting-food">its munin plugin</a>.</li>
+<li>
+<a href="https://github.com/shimaore/huge-play">huge-play</a>, the base SBC middleware for CCNQ4.</li>
+<li>
+<a href="https://github.com/shimaore/well-groomed-feast">well-groomed-feast</a>, the CouchDB-backed voicemail.</li>
+<li>
+<a href="https://github.com/shimaore/brown-pencil">brown-pencil</a> the French "RIO fixe" interactive voice service (under development).</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
