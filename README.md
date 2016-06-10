@@ -15,6 +15,7 @@ Infrastructure
 * [proud-thumb](https://github.com/shimaore/proud-thumb), demonstration browser tool showing call progress in real-time.
 * [nimble-direction](https://github.com/shimaore/nimble-direction), distributed CouchDB toolbox -- used to ensure individual call-processing servers continue working even in case of failure or unreachability of the master-master, main provisioning database.
 * [cuddly](https://github.com/shimaore/cuddly), an operations-driven, simple to use and deploy, Socket.IO-based notification framework.
+* [gabby-potato](https://github.com/shimaore/tough-rate/), a Socket.IO-controlled FreeSwitch instance meant to be used as a generic client emulator and call-generator for automated testing.
 
 FreeSwitch XML Configuration
 ----------------------------
