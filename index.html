@@ -31,55 +31,13 @@
       </header>
       <section>
         <h1>
-<a id="ccnq4" class="anchor" href="#ccnq4" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://ccnq.shimaore.net">CCNQ4</a>
+<a id="ccnq4" class="anchor" href="#ccnq4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://ccnq.shimaore.net">CCNQ4</a>
 </h1>
 
-<p>SIP SoftSwitch. All core development is completed (including Voicemail), development is now focusing on extended applications (IP Centrex).</p>
+<p>SIP SoftSwitch. All core development is completed (including Voicemail), development is now focusing on extended applications (such as IP Centrex).</p>
 
 <h2>
-<a id="infrastructure" class="anchor" href="#infrastructure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Infrastructure</h2>
-
-<ul>
-<li>
-<a href="https://github.com/shimaore/docker.freeswitch">docker.freeswitch</a>, <a href="https://github.com/shimaore/docker.couchdb">docker.couchdb</a>, etc. -- CCNQ4 relies on docker.io instead of Debian packages which were the norm for CCNQ3.</li>
-<li>
-<a href="https://github.com/shimaore/ccnq4-opensips">ccnq4-opensips</a>, OpenSIPS-as-Docker-image integrated with configuration, CouchDB interfaces, REST management, ... (includes <a href="https://github.com/shimaore/royal-thing">royal-thing</a>, a tool to automatically restart an OpenSIPS registrant server on changes).</li>
-<li>
-<a href="https://github.com/shimaore/willing-toothbrush">willing-toothbrush</a>, the CouchDB-backed DNS server.</li>
-<li>
-<a href="https://github.com/shimaore/spicy-action">spicy-action</a> is a web and Socket.IO proxy to allow browser-side clients, back-ends, and CouchDB, to exchange data.</li>
-<li>
-<a href="https://github.com/shimaore/nifty-ground">nifty-ground</a>, the distributed sniffer, integrated with <code>spicy-action</code>, delivered as a Docker.IO container.</li>
-<li>
-<a href="https://github.com/shimaore/ethereal-banana">ethereal-banana</a> and <a href="https://github.com/shimaore/absurd-clover">absurd-clover</a>, browser-side tools to handle sniffer traces and CDR statistics.</li>
-<li>
-<a href="https://github.com/shimaore/proud-thumb">proud-thumb</a>, demonstration browser tool showing call progress in real-time.</li>
-<li>
-<a href="https://github.com/shimaore/nimble-direction">nimble-direction</a>, distributed CouchDB toolbox -- used to ensure individual call-processing servers continue working even in case of failure or unreachability of the master-master, main provisioning database.</li>
-<li>
-<a href="https://github.com/shimaore/cuddly">cuddly</a>, an operations-driven, simple to use and deploy, Socket.IO-based notification framework.</li>
-</ul>
-
-<h2>
-<a id="freeswitch-xml-configuration" class="anchor" href="#freeswitch-xml-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>FreeSwitch XML Configuration</h2>
-
-<ul>
-<li>
-<a href="https://github.com/shimaore/acoustic-line">acoustic-line</a>, the CoffeeScript templating system to generate FreeSwitch XML configurations.</li>
-<li>
-<a href="https://github.com/shimaore/bumpy-lawyer">bumpy-lawyer</a> FreeSwitch phrases for pronunciation of numbers, spelling words, etc.</li>
-</ul>
-
-<h2>
-<a id="freeswitch-interaction-with-nodejs" class="anchor" href="#freeswitch-interaction-with-nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>FreeSwitch interaction with Node.js</h2>
-
-<ul>
-<li>
-<a href="https://github.com/shimaore/esl">esl</a>, the Node.js Promise-based interface to FreeSwitch's event socket (inbound and outbound).</li>
-</ul>
-
-<h2>
-<a id="call-processing-using-middleware" class="anchor" href="#call-processing-using-middleware" aria-hidden="true"><span class="octicon octicon-link"></span></a>Call Processing using Middleware</h2>
+<a id="call-processing-using-middleware" class="anchor" href="#call-processing-using-middleware" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Call Processing using Middleware</h2>
 
 <p>CCNQ4 uses the concept of middleware (similar to the ones used by Connect, ExpressJS, ...) to simplify writing dynamic call-handling applications.</p>
 
@@ -100,7 +58,51 @@
 <li>
 <a href="https://github.com/shimaore/well-groomed-feast">well-groomed-feast</a>, the CouchDB-backed voicemail.</li>
 <li>
-<a href="https://github.com/shimaore/brown-pencil">brown-pencil</a> the French "RIO fixe" interactive voice service (under development).</li>
+<a href="https://github.com/shimaore/brown-pencil">brown-pencil</a>, an Interactive Voice Service for the French "RIO fixe".</li>
+</ul>
+
+<h2>
+<a id="infrastructure" class="anchor" href="#infrastructure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Infrastructure</h2>
+
+<ul>
+<li>
+<a href="https://github.com/shimaore/docker.freeswitch">docker.freeswitch</a>, <a href="https://github.com/shimaore/docker.couchdb">docker.couchdb</a>, etc. -- CCNQ4 relies on docker.io instead of Debian packages which were the norm for CCNQ3.</li>
+<li>
+<a href="https://github.com/shimaore/ccnq4-opensips">ccnq4-opensips</a>, OpenSIPS-as-Docker-image integrated with configuration, CouchDB interfaces, REST management, ... (includes <a href="https://github.com/shimaore/royal-thing">royal-thing</a>, a tool to automatically restart an OpenSIPS registrant server on changes).</li>
+<li>
+<a href="https://github.com/shimaore/willing-toothbrush">willing-toothbrush</a>, the CouchDB-backed DNS server.</li>
+<li>
+<a href="https://github.com/shimaore/spicy-action">spicy-action</a> is a web and Socket.IO proxy to allow browser-side clients, back-ends, and CouchDB, to exchange data.</li>
+<li>
+<a href="https://github.com/shimaore/nifty-ground">nifty-ground</a>, the distributed sniffer, integrated with <code>spicy-action</code>, delivered as a Docker.IO container.</li>
+<li>
+<a href="https://github.com/shimaore/ethereal-banana">ethereal-banana</a> and <a href="https://github.com/shimaore/absurd-clover">absurd-clover</a>, browser-side tools to handle sniffer traces and CDR statistics.</li>
+<li>
+<a href="https://github.com/shimaore/proud-thumb">proud-thumb</a>, demonstration browser tool showing call progress in real-time.</li>
+<li>
+<a href="https://github.com/shimaore/nimble-direction">nimble-direction</a>, distributed CouchDB toolbox -- used to ensure individual call-processing servers continue working even in case of failure or unreachability of the master-master, main provisioning database.</li>
+<li>
+<a href="https://github.com/shimaore/cuddly">cuddly</a>, an operations-driven, simple to use and deploy, Socket.IO-based notification framework.</li>
+<li>
+<a href="https://github.com/shimaore/tough-rate/">gabby-potato</a>, a Socket.IO-controlled FreeSwitch instance meant to be used as a generic client emulator and call-generator for automated testing.</li>
+</ul>
+
+<h2>
+<a id="freeswitch-xml-configuration" class="anchor" href="#freeswitch-xml-configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FreeSwitch XML Configuration</h2>
+
+<ul>
+<li>
+<a href="https://github.com/shimaore/acoustic-line">acoustic-line</a>, the CoffeeScript templating system to generate FreeSwitch XML configurations.</li>
+<li>
+<a href="https://github.com/shimaore/bumpy-lawyer">bumpy-lawyer</a> FreeSwitch phrases for pronunciation of numbers, spelling words, etc.</li>
+</ul>
+
+<h2>
+<a id="freeswitch-interaction-with-nodejs" class="anchor" href="#freeswitch-interaction-with-nodejs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FreeSwitch interaction with Node.js</h2>
+
+<ul>
+<li>
+<a href="https://github.com/shimaore/esl">esl</a>, the Node.js Promise-based interface to FreeSwitch's event socket (inbound and outbound).</li>
 </ul>
       </section>
       <footer>
