@@ -1,7 +1,22 @@
 [CCNQ4](http://ccnq.shimaore.net)
 =================================
 
-SIP SoftSwitch. All core development is completed (including Voicemail), development is now focusing on extended applications (IP Centrex).
+SIP SoftSwitch. All core development is completed (including Voicemail), development is now focusing on extended applications (such as IP Centrex).
+
+Call Processing using Middleware
+--------------------------------
+
+CCNQ4 uses the concept of middleware (similar to the ones used by Connect, ExpressJS, ...) to simplify writing dynamic call-handling applications.
+
+* [useful-wind](https://github.com/shimaore/useful-wind), a middleware-based framework to build applications for FreeSwitch.
+* [thinkable-ducks](https://github.com/shimaore/thinkable-ducks), a npm package and Docker.IO image extending `useful-wind` with a REST interface and Socket.IO event notifications (to the `spicy-action` proxy) and embeds FreeSwitch.
+
+Available middlewares / applications:
+
+* [tough-rate](https://github.com/shimaore/tough-rate/), LCR engine; provided as a [Docker image](https://gtihub.com/shimaore/docker.tough-rate) with FreeSwitch, a REST interface and Socket.IO notifications. Also available is [its munin plugin](https://github.com/shimaore/earsplitting-food).
+* [huge-play](https://github.com/shimaore/huge-play), the base SBC middleware for CCNQ4.
+* [well-groomed-feast](https://github.com/shimaore/well-groomed-feast), the CouchDB-backed voicemail.
+* [brown-pencil](https://github.com/shimaore/brown-pencil), an Interactive Voice Service for the French "RIO fixe".
 
 Infrastructure
 --------------
@@ -27,19 +42,3 @@ FreeSwitch interaction with Node.js
 -----------------------------------
 
 * [esl](https://github.com/shimaore/esl), the Node.js Promise-based interface to FreeSwitch's event socket (inbound and outbound).
-
-Call Processing using Middleware
---------------------------------
-
-CCNQ4 uses the concept of middleware (similar to the ones used by Connect, ExpressJS, ...) to simplify writing dynamic call-handling applications.
-
-* [useful-wind](https://github.com/shimaore/useful-wind), a middleware-based framework to build applications for FreeSwitch.
-* [thinkable-ducks](https://github.com/shimaore/thinkable-ducks), a npm package and Docker.IO image extending `useful-wind` with a REST interface and Socket.IO event notifications (to the `spicy-action` proxy) and embeds FreeSwitch.
-
-Available middlewares / applications:
-
-* [tough-rate](https://github.com/shimaore/tough-rate/), LCR engine; provided as a [Docker image](https://gtihub.com/shimaore/docker.tough-rate) with FreeSwitch, a REST interface and Socket.IO notifications. Also available is [its munin plugin](https://github.com/shimaore/earsplitting-food).
-* [huge-play](https://github.com/shimaore/huge-play), the base SBC middleware for CCNQ4.
-* [well-groomed-feast](https://github.com/shimaore/well-groomed-feast), the CouchDB-backed voicemail.
-* [brown-pencil](https://github.com/shimaore/brown-pencil) the French "RIO fixe" interactive voice service (under development).
-
