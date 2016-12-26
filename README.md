@@ -17,6 +17,8 @@ Available middlewares / applications:
 * [huge-play](https://github.com/shimaore/huge-play), the base SBC middleware for CCNQ4.
 * [well-groomed-feast](https://github.com/shimaore/well-groomed-feast), the CouchDB-backed voicemail.
 * [brown-pencil](https://github.com/shimaore/brown-pencil), an Interactive Voice Service for the French "RIO fixe".
+* flat-ornament, parametered execution of data scripts
+* earthy-slave, call rating.
 
 Infrastructure
 --------------
@@ -31,6 +33,21 @@ Infrastructure
 * [nimble-direction](https://github.com/shimaore/nimble-direction), distributed CouchDB toolbox — used to ensure individual call-processing servers continue working even in case of failure or unreachability of the master-master, main provisioning database.
 * [cuddly](https://github.com/shimaore/cuddly), a devops notification framework, simple to use and deploy, based on Socket.IO.
 * [gabby-potato](https://github.com/shimaore/tough-rate/), a Socket.IO-controlled FreeSwitch instance meant to be used as a generic client emulator and call-generator for automated testing.
+* rightful-hot-server, app conventions for RioJS+ZappaJS — server-side.
+* rightful-hot, app conventions for RiotJS+ZappaJS — client-side.
+* rough-produce, log support events.
+* fr-sounds, French audio files for FreeSwitch, along with ordinary-tail, audio files for new services.
+* 2015-rmll-isp, a presentation about voice for ISP (in French).
+* incomplete: calm-belief, voicemail database cleanups.
+* exultant-sounds, click-to-dial over socket.io.
+* zesty-vessel, socket-to-mail service.
+* spicy-action-user, user parameters (locale, timezone) for spicy-action.
+* charming-circle, per-user database (for voicemail, provisioning, …).
+* astonishing-competition, CDR aggregation (pre-invoicing).
+* numbering-plans, International Numbering Plans.
+* entertaining-crib, CDR rating.
+* chunky-grade, provisioning validation.
+* frantic-team, inject replication documents in CouchDB.
 
 FreeSwitch XML Configuration
 ----------------------------
