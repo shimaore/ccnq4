@@ -1,7 +1,7 @@
 [CCNQ4](http://ccnq.shimaore.net)
 =================================
 
-SIP SoftSwitch. All core development is completed (including Voicemail), development is now focusing on extended applications (such as IP Centrex).
+SIP SoftSwitch. All core development is completed (including Voicemail and IP Centrex), development is now focusing on extended applications (such as Call-Center).
 
 Call Processing using Middleware
 --------------------------------
