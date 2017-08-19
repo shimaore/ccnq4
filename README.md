@@ -39,7 +39,7 @@ Infrastructure
 * fr-sounds, French audio files for FreeSwitch, along with ordinary-tail, audio files for new services.
 * 2015-rmll-isp, a presentation about voice for ISP (in French).
 * incomplete: calm-belief, voicemail database cleanups.
-* exultant-sounds, click-to-dial over socket.io.
+* ~exultant-sounds~, click-to-dial over socket.io → now part of huge-play.
 * zesty-vessel, socket-to-mail service.
 * spicy-action-user, user parameters (locale, timezone) for spicy-action.
 * charming-circle, per-user database (for voicemail, provisioning, …).
